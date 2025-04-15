@@ -8,7 +8,14 @@
     <title>🎮 Memory Games - Accueil</title>
   </head>
   <body>
+    <!-- HAUT DE PAGE -->
     <header class="site-header">
+      <img
+        src="ressources1/brain-logo.png"
+        alt="logo brain"
+        width="70px"
+        height="70px"
+      />
       <h1 class="titre">Memory Games !</h1>
       <nav class="menu">
         <ul class="menu-list">
@@ -20,11 +27,12 @@
         </ul>
       </nav>
     </header>
+    <!-- CENTRE DE PAGE -->
     <main class="main-content">
       <section class="bienvenue-section">
-        <p>Bienvenue sur le site du Memory de l'ENI.</p>
-        <p>Venez jouer avec nous et faites le meilleur score possible.</p>
-        <h2>Règles du jeu</h2>
+        <h2>Bienvenue sur le site du Memory de l'ENI.</h2>
+        <p>Venez jouer avec nous et faites le meilleur score possible !</p>
+        <h3>Règles du jeu</h3>
         <li>
           Retourner deux cartes. Si les images sont identiques, le jeu laisse
           les cartes visibles.
@@ -37,8 +45,8 @@
           La partie est terminée lorsque toutes les cartes ont été assemblées
           par paires.
         </li>
-        <br />
         <img
+          class="image-plateau"
           src="ressources1/memory-legume/memory_detail.png"
           alt="Exemple plateau Memory"
           width="270px"
@@ -46,67 +54,78 @@
         />
         <p>
           Si vous voulez vous souvenir de votre scores. Inscrivez-vous via le
-          formulaire.
+          <a href="inscription.html"> formulaire.</a>
         </p>
         <p>Le jeu garde les 5 meilleurs scores.</p>
         <p>Si vous voulez relancer une partie cliquez sur la barre d'espace.</p>
       </section>
     </main>
-    <footer class="footer">
+    <!-- BAS DE PAGE -->
+    <footer>
       <div class="footer-container">
-        <div class="footer-section footer-home">
-          <a href="/" class="footer-link">Retour à l'accueil</a>
+        <img
+          src="ressources1/brain-logo.png"
+          alt="logo brain"
+          width="100px"
+          height="100px"
+        />
+        <div class="home">
+          <a href="index.html" class="link">Retour à l'accueil</a>
         </div>
 
-        <div class="footer-section footer-contact">
+        <div class="contact">
           <p>
             Contactez-nous :
-            <a href="mailto:contact@exemple.com" class="footer-link"
+            <a href="mailto:contact@exemple.com" class="link"
               >contact@exemple.com</a
             >
           </p>
         </div>
 
-        <div class="footer-section footer-socials">
+        <div class="social">
           <p>Suivez-nous sur :</p>
           <ul class="social-links">
             <li>
-              <a
-                href="https://www.facebook.com/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >Facebook</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/facebook.png"
+                  alt="Facebook"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
             <li>
-              <a
-                href="https://twitter.com/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >Twitter</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/twitter.png"
+                  alt="Twitter"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >Instagram</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/instagram.png"
+                  alt="Instagram"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >LinkedIn</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/linkedIn.png"
+                  alt="LinkedIn"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
           </ul>
         </div>
 
-        <div class="footer-section footer-copyright">
-          <p>&copy; 2025 Memory Games. Tous droits réservés.</p>
+        <div class="copyright">
+          <h6>&copy; 2025 Memory Games. Tous droits réservés.</h6>
         </div>
       </div>
     </footer>

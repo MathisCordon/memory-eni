@@ -4,27 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
     <title>🎮 Memory Games - Inscription</title>
   </head>
   <body>
+    <!-- HAUT DE PAGE -->
     <header class="site-header">
-        <h1 class="titre">Memory Games !</h1>
-        <nav class="menu">
-          <ul class="menu-list">
-            <li><a href="index.html" class="menu-link">Accueil</a></li>
-            <li><a href="inscription.html" class="menu-link">S'inscrire</a></li>
-            <li><a href="connexion.html" class="menu-link">Se connecter</a></li>
-            <li><a href="profil.html" class="menu-link">Profil</a></li>
-            <li><a href="jouer.html" class="menu-link">Jouer</a></li>
-          </ul>
-        </nav>
-      </header>
+      <img
+        src="ressources1/brain-logo.png"
+        alt="logo brain"
+        width="70px"
+        height="70px"
+      />
+      <h1 class="titre">Memory Games !</h1>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="index.html" class="menu-link">Accueil</a></li>
+          <li><a href="inscription.html" class="menu-link">S'inscrire</a></li>
+          <li><a href="connexion.html" class="menu-link">Se connecter</a></li>
+          <li><a href="profil.html" class="menu-link">Profil</a></li>
+          <li><a href="jouer.html" class="menu-link">Jouer</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section>
         <div class="formulaire-inscription">
           <h1>Inscrivez-vous.</h1>
-
+    
           <form action="" method="post">
             <div>
               <label for="nom">Nom d'utilisateur* :</label>
@@ -33,6 +39,7 @@
                 id="nom"
                 name="nom"
                 placeholder="3 caractères minimum"
+                minlength="3"
                 required
               />
             </div>
@@ -43,6 +50,7 @@
                 type="email"
                 id="email"
                 name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 placeholder="Votre e-mail"
                 required
               />
@@ -50,16 +58,28 @@
             <br />
             <div class="form-group">
               <label for="idMDP">Mot de passe* :</label>
-              <input
-                type="password"
-                name="mdp"
-                id="idMDP"
-                placeholder="Entrez votre Mot de passe"
-                required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-                title="Le mot de passe doit contenir au moins 8 caractères, dont une lettre minuscule, une lettre majuscule et un chiffre."
-              />
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  name="mdp"
+                  id="idMDP"
+                  placeholder="Entrez votre mot de passe"
+                  required
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
+                  title="Le mot de passe doit contenir au moins 6 caractères, dont une lettre minuscule, une lettre majuscule et un chiffre."
+                />
+                <button type="button" id="btn-visibilite-password">
+                  <img
+                    src="ressources1/oeil-ferme.png"
+                    alt="Icône oeil fermé"
+                    id="oeil"
+                    width="24"
+                    height="24"
+                  />
+                </button>
+              </div>
             </div>
+    
             <p>
               Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.
             </p>
@@ -72,78 +92,98 @@
                 id="idVMDP"
                 placeholder="Veuillez resaisir votre Mot de passe"
                 required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-                title="Le mot de passe doit contenir au moins 8 caractères, dont une lettre minuscule, une lettre majuscule et un chiffre."
               />
             </div>
             <br />
             <div>
-              <button type="submit">Création du compte</button>
+              <button class="btn-creation" type="submit" id="creation-compte" disabled>Création du compte</button>
             </div>
             <div>
-              <button type="reset">Annuler</button>
+              <button class="btn-reset" type="reset">Annuler</button>
             </div>
           </form>
+          <section class="infos">
+            <h2>Consignes du mot de passe :</h2>
+            <ul>
+                <li id="minuscule">Doit comporter une minuscule</li>
+                <li id="majuscule">Doit comporter une majuscule</li>
+                <li id="chiffre">Doit comporter un chiffre</li>
+                <li id="nbCaracteres">Doit faire au minimum 6 caractères</li>
+            </ul>
+        </section>
+        <p>* obligatoire</p>
         </div>
       </section>
     </main>
-    <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-section footer-home">
-            <a href="/" class="footer-link">Retour à l'accueil</a>
-          </div>
-  
-          <div class="footer-section footer-contact">
-            <p>
-              Contactez-nous :
-              <a href="mailto:contact@exemple.com" class="footer-link"
-                >contact@exemple.com</a
-              >
-            </p>
-          </div>
-  
-          <div class="footer-section footer-socials">
-            <p>Suivez-nous sur :</p>
-            <ul class="social-links">
-              <li>
-                <a
-                  href="https://www.facebook.com/tonprofil"
-                  target="_blank"
-                  class="footer-link"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/tonprofil"
-                  target="_blank"
-                  class="footer-link"
-                  >Twitter</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/tonprofil"
-                  target="_blank"
-                  class="footer-link"
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/tonprofil"
-                  target="_blank"
-                  class="footer-link"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul>
-          </div>
-  
-          <div class="footer-section footer-copyright">
-            <p>&copy; 2025 Memory Games. Tous droits réservés.</p>
-          </div>
+    <!-- BAS DE PAGE -->
+    <footer>
+      <div class="footer-container">
+        <img
+          src="ressources1/brain-logo.png"
+          alt="logo brain"
+          width="100px"
+          height="100px"
+        />
+        <div class="home">
+          <a href="index.html" class="link">Retour à l'accueil</a>
         </div>
-      </footer>
+
+        <div class="contact">
+          <p>
+            Contactez-nous :
+            <a href="mailto:contact@exemple.com" class="link"
+              >contact@exemple.com</a
+            >
+          </p>
+        </div>
+
+        <div class="social">
+          <p>Suivez-nous sur :</p>
+          <ul class="social-links">
+            <li>
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/facebook.png"
+                  alt="Facebook"
+                  width="30px"
+                  height="30px"
+              /></a>
+            </li>
+            <li>
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/twitter.png"
+                  alt="Twitter"
+                  width="30px"
+                  height="30px"
+              /></a>
+            </li>
+            <li>
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/instagram.png"
+                  alt="Instagram"
+                  width="30px"
+                  height="30px"
+              /></a>
+            </li>
+            <li>
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/linkedIn.png"
+                  alt="LinkedIn"
+                  width="30px"
+                  height="30px"
+              /></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <h6>&copy; 2025 Memory Games. Tous droits réservés.</h6>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

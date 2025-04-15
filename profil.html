@@ -8,18 +8,25 @@
     <title>🎮 Memory Games - Mon profil</title>
   </head>
   <body>
+    <!-- HAUT DE PAGE -->
     <header class="site-header">
-        <h1 class="titre">Memory Games !</h1>
-        <nav class="menu">
-          <ul class="menu-list">
-            <li><a href="index.html" class="menu-link">Accueil</a></li>
-            <li><a href="inscription.html" class="menu-link">S'inscrire</a></li>
-            <li><a href="connexion.html" class="menu-link">Se connecter</a></li>
-            <li><a href="profil.html" class="menu-link">Profil</a></li>
-            <li><a href="jouer.html" class="menu-link">Jouer</a></li>
-          </ul>
-        </nav>
-      </header>
+      <img
+        src="ressources1/brain-logo.png"
+        alt="logo brain"
+        width="70px"
+        height="70px"
+      />
+      <h1 class="titre">Memory Games !</h1>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="index.html" class="menu-link">Accueil</a></li>
+          <li><a href="inscription.html" class="menu-link">S'inscrire</a></li>
+          <li><a href="connexion.html" class="menu-link">Se connecter</a></li>
+          <li><a href="profil.html" class="menu-link">Profil</a></li>
+          <li><a href="jouer.html" class="menu-link">Jouer</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section>
         <section>
@@ -40,6 +47,7 @@
                 <br>
                 <div class="form-group">
                   <label for="idMDP">Mot de passe* :</label>
+                  <div class="password-wrapper">
                   <input
                     type="password"
                     name="mdp"
@@ -47,10 +55,19 @@
                     placeholder="Entrez votre Mot de passe"
                     required
                   />
+                  <button type="button" id="btn-visibilite-password">
+                    <img
+                      src="ressources1/oeil-ferme.png"
+                      alt="Icône oeil fermé"
+                      id="oeil"
+                      width="24"
+                      height="24"
+                    />
+                  </button>
                 </div>
                 <br>
               </form>
-            </div>
+            
             <p>Choix du memory :</p>
             <select id="memorySelect" onchange="changerImage()">
                 <option value="">-- Sélectionnez --</option>
@@ -64,75 +81,87 @@
                 <option value="legumes">Légumes</option>
             </select>
             <div id="imageContainer">
-                <img id="memoryImage" src="" alt="">
+                <img id="memoryImage" src="" alt="" height="220px" width="350px">
             </div>
-            <p>Choix de la taille du memory</p>
+            <p>Choix de la taille du memory :</p>
             <select id="tailleMemory">
                 <option value="">-- Sélectionnez --</option>
                 <option value="4x3">4x3</option>
                 <option value="8x6">8x6</option>
             </select>
             <div>
-                <button type="submit">Enregistrez votre choix</button>
+                <button class="btn-choix" type="submit">Enregistrez votre choix</button>
             </div>
             <br>
+          </div>
       </section>
     </main>
-    <footer class="footer">
+    <!-- BAS DE PAGE -->
+    <footer>
       <div class="footer-container">
-        <div class="footer-section footer-home">
-          <a href="/" class="footer-link">Retour à l'accueil</a>
+        <img
+          src="ressources1/brain-logo.png"
+          alt="logo brain"
+          width="100px"
+          height="100px"
+        />
+        <div class="home">
+          <a href="index.html" class="link">Retour à l'accueil</a>
         </div>
 
-        <div class="footer-section footer-contact">
+        <div class="contact">
           <p>
             Contactez-nous :
-            <a href="mailto:contact@exemple.com" class="footer-link"
+            <a href="mailto:contact@exemple.com" class="link"
               >contact@exemple.com</a
             >
           </p>
         </div>
 
-        <div class="footer-section footer-socials">
+        <div class="social">
           <p>Suivez-nous sur :</p>
           <ul class="social-links">
             <li>
-              <a
-                href="https://www.facebook.com/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >Facebook</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/facebook.png"
+                  alt="Facebook"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
             <li>
-              <a
-                href="https://twitter.com/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >Twitter</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/twitter.png"
+                  alt="Twitter"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >Instagram</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/instagram.png"
+                  alt="Instagram"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/tonprofil"
-                target="_blank"
-                class="footer-link"
-                >LinkedIn</a
-              >
+              <a href="" target="_blank" class="link"
+                ><img
+                  src="ressources1/linkedIn.png"
+                  alt="LinkedIn"
+                  width="30px"
+                  height="30px"
+              /></a>
             </li>
           </ul>
         </div>
 
-        <div class="footer-section footer-copyright">
-          <p>&copy; 2025 Memory Games. Tous droits réservés.</p>
+        <div class="copyright">
+          <h6>&copy; 2025 Memory Games. Tous droits réservés.</h6>
         </div>
       </div>
     </footer>
